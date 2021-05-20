@@ -109,6 +109,7 @@ const AddOrEditPage = ({ edit }: AddOrEditPageProps) => {
                   type="number"
                   value={budget}
                   onChange={(event) => changeBudget(+event.target.value)}
+                  min="1"
                 />
                 <InputRightAddon children="$" />
               </InputGroup>
@@ -134,7 +135,7 @@ const AddOrEditPage = ({ edit }: AddOrEditPageProps) => {
           margin="1rem 0"
         >
           <Link to="/">
-            <Button w="5rem" colorScheme="red">
+            <Button w="5rem" colorScheme="red" onClick={clearAllInputs}>
               Отмена
             </Button>
           </Link>
